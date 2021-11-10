@@ -23,10 +23,10 @@ module.exports = async (client, message) => {
     const args = message.content.slice(mPrefix.length).trim().split(/ +/).filter(Boolean);
     const cmd = args.length > 0 ? args.shift().toLowerCase() : null;
     if(!cmd || cmd.length == 0){
-        if(mPrefix.includes(client.user.id)){
-            message.reply({embeds: [new Discord.MessageEmbed().setColor(ee.color).setFooter(ee.footertext, ee.footericon).setTitle(`:thumbsup: **My Prefix here, is __\`${prefix}\`__**`)]})
-        }
-        return;
+//         if(mPrefix.includes(client.user.id)){
+//             message.reply({embeds: [new Discord.MessageEmbed().setColor(ee.color).setFooter(ee.footertext, ee.footericon).setTitle(`:thumbsup: **My Prefix here, is __\`${prefix}\`__**`)]})
+//         }
+//         return;
     }
     let command = client.commands.get(cmd);
     if(!command) command = client.commands.get(client.aliases.get(cmd));
