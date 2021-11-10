@@ -51,7 +51,7 @@ module.exports = {
 					embeds: [new MessageEmbed()
 						.setColor(ee.wrongcolor)
 						.setFooter(ee.footertext, ee.footericon)
-						.setTitle(`:x: Your Voice Channel is full, I can't join!`)
+						.setDescription(`<:nino_angry:905348589897797642> Your Voice Channel is full, I can't join!`)
 					],
 				});
 			if (channel.guild.me.voice.channel && channel.guild.me.voice.channel.id != channel.id) {
@@ -59,7 +59,7 @@ module.exports = {
 					embeds: [new MessageEmbed()
 						.setColor(ee.wrongcolor)
 						.setFooter(ee.footertext, ee.footericon)
-						.setTitle(`:x: I am already connected somewhere else`)
+						.setDescription(`<:nino_angry:905348589897797642> I am already connected somewhere else`)
 					],
 				});
 			}
@@ -68,7 +68,7 @@ module.exports = {
 					embeds: [new MessageEmbed()
 						.setColor(ee.wrongcolor)
 						.setFooter(ee.footertext, ee.footericon)
-						.setTitle(`${client.allEmojis.x} **Please add a Search Query!**`)
+						.setTitle(`<:nino_angry:905348589897797642> **Please add a Search Query!**`)
 						.setDescription(`**Usage:**\n> \`${client.settings.get(message.guild.id, "prefix")}play <Search/Link>\``)
 					],
 				});
