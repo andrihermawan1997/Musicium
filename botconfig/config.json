@@ -1,7 +1,7 @@
 {
   "token": "Discord-Bot-Token-goes-here!",
-  "prefix": "k!",
-  "ksoftapi": "NEEDED_FOR_LYRICS",
+  "prefix": "C.",
+  "ksoftapi": "AIzaSyAAg3GHxipuyDz7KsCAv434yoFT56TR9LQ",
   "youtubeCookie": "",
   "spotify_api": {
         "enabled": false, "_COMMENT_": "Set it to false, if you want to scrape, when on true you can get spotify playlists with 100+ Tracks",
