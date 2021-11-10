@@ -37,13 +37,13 @@ const client = new Discord.Client({
         //Discord.Intents.FLAGS.DIRECT_MESSAGE_REACTIONS,
         //Discord.Intents.FLAGS.DIRECT_MESSAGE_TYPING
     ],
-    presence: {
-      activity: {
-        name: `+help | musicium.eu`, 
-        type: "PLAYING", 
-      },
-      status: "online"
-    }
+//     presence: {
+//       activity: {
+//         name: `+help | musicium.eu`, 
+//         type: "PLAYING", 
+//       },
+//       status: "online"
+//     }
 });
 //BOT CODED BY: Tomato#6966
 //DO NOT SHARE WITHOUT CREDITS!
