@@ -77,7 +77,7 @@ module.exports = {
 			const Text = args.join(" ") //same as in StringChoices //RETURNS STRING 
 			//update it without a response!
 			let newmsg = await message.reply({
-				content: `🔍 Searching... \`\`\`${Text}\`\`\``,
+				content: `<a:search_nino:907962287711719436> Searching... \`\`\`${Text}\`\`\``,
 			}).catch(e => {
 				console.log(e)
 			})
