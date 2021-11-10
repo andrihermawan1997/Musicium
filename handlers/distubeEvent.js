@@ -495,7 +495,6 @@ module.exports = (client) => {
       .on(`finishSong`, (queue, song) => {
         var embed = new MessageEmbed().setColor(ee.color)
         .setAuthor(`${song.name}`, "https://cdn.discordapp.com/attachments/883978730261860383/883978741892649000/847032838998196234.png", song.url)
-        .setDescription(`See the [Queue on the **DASHBOARD** Live!](${require("../dashboard/settings.json").website.domain}/${queue.id})`)
         .setThumbnail(`https://img.youtube.com/vi/${song.id}/mqdefault.jpg`)
         .setFooter(`💯 ${song.user.tag}\n⛔️ SONG ENDED!`, song.user.displayAvatarURL({
           dynamic: true
