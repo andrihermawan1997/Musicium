@@ -8,9 +8,9 @@
 
     "messages": {
         "ping_message": "To see all Commands type: `%{prefix}%help`",
-        "cooldown": "❌ Please wait %{timeleft}% more Second(s) before reusing the `%{commandname}%` command.",
+        "cooldown": "<:ndno:907870903726120970> Please wait %{timeleft}% more Second(s) before reusing the `%{commandname}%` command.",
         "notallowed_to_exec_cmd": {
-            "title": "❌ You are not allowed to run this command!",
+            "title": "<:ndno:907870903726120970> You are not allowed to run this command!",
             "description": {
                 "memberpermissions": "You need these Permissions:\n> %{commandmemberpermissions}%",
                 "alloweduserids": "You need to be one of the Following Users:\n> %{commandalloweduserids}%",
@@ -19,11 +19,11 @@
             }
         },
         "somethingwentwrong_cmd": {
-            "title": "❌ Something went wrong while, running the: `%{commandname}%` command",
+            "title": "<:ndno:907870903726120970> Something went wrong while, running the: `%{commandname}%` command",
             "description": "```%{errormessage}%```"
         },
-        "unknown_cmd": "❌ Unkown command, try: **`%{prefix}%help`**",
-        "error_occur": "❌ An error occurred",
+        "unknown_cmd": "<:ndno:907870903726120970> Unkown command, try: **`%{prefix}%help`**",
+        "error_occur": "<:ndno:907870903726120970> An error occurred",
         "error_occur_desc": "````%{errorstack}%````"
     },
     "timeout": {
