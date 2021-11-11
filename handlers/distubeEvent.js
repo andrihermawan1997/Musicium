@@ -550,11 +550,10 @@ module.exports = (client) => {
       .addField(`🔊 Volume:`, `>>> \`${newQueue.volume} %\``, true)
       .addField(`♾ Loop:`, `>>> ${newQueue.repeatMode ? newQueue.repeatMode === 2 ? `${client.allEmojis.check_mark}\` Queue\`` : `${client.allEmojis.check_mark} \`Song\`` : `${client.allEmojis.x}`}`, true)
       .addField(`↪️ Autoplay:`, `>>> ${newQueue.autoplay ? `${client.allEmojis.check_mark}` : `${client.allEmojis.x}`}`, true)
-      .addField(`❔ Download Song:`, `>>> [\`Click here\`](${newTrack.streamURL})`, true)
       .addField(`❔ Filter${newQueue.filters.length > 0 ? "s": ""}:`, `>>> ${newQueue.filters && newQueue.filters.length > 0 ? `${newQueue.filters.map(f=>`\`${f}\``).join(`, `)}` : `${client.allEmojis.x}`}`, newQueue.filters.length > 1 ? false : true)
-			.addField(`🎧 DJ-Role${client.settings.get(newQueue.id, "djroles").length > 1 ? "s": ""}:`, `>>> ${djs}`, client.settings.get(newQueue.id, "djroles").length > 1 ? false : true)
+      .addField(`🎧 DJ-Role${client.settings.get(newQueue.id, "djroles").length > 1 ? "s": ""}:`, `>>> ${djs}`, client.settings.get(newQueue.id, "djroles").length > 1 ? false : true)
       .setAuthor(`${newTrack.name}`, `https://images-ext-1.discordapp.net/external/DkPCBVBHBDJC8xHHCF2G7-rJXnTwj_qs78udThL8Cy0/%3Fv%3D1/https/cdn.discordapp.com/emojis/859459305152708630.gif`, newTrack.url)
-      .setThumbnail(`https://img.youtube.com/vi/${newTrack.id}/mqdefault.jpg`)
+      .setImage(`https://img.youtube.com/vi/${newTrack.id}/mqdefault.jpg`)
       .setFooter(`💯 ${newTrack.user.tag}`, newTrack.user.displayAvatarURL({
         dynamic: true
       }));
@@ -573,7 +572,6 @@ module.exports = (client) => {
     let queueloop = new MessageButton().setStyle('SUCCESS').setCustomId('7').setEmoji(`🔂`).setLabel(`Queue`)
     let forward = new MessageButton().setStyle('PRIMARY').setCustomId('8').setEmoji('⏩').setLabel(`+10 Sec`)
     let rewind = new MessageButton().setStyle('PRIMARY').setCustomId('9').setEmoji('⏪').setLabel(`-10 Sec`)
-    let lyrics = new MessageButton().setStyle('PRIMARY').setCustomId('10').setEmoji('📝').setLabel(`Lyrics`).setDisabled();
     if (newQueue.repeatMode === 0) {
       songloop = songloop.setStyle('SUCCESS')
       queueloop = queueloop.setStyle('SUCCESS')
@@ -597,7 +595,7 @@ module.exports = (client) => {
       forward = forward.setDisabled(false)
     }
     const row = new MessageActionRow().addComponents([skip, stop, pause, autoplay, shuffle]);
-    const row2 = new MessageActionRow().addComponents([songloop, queueloop, forward, rewind, lyrics]);
+    const row2 = new MessageActionRow().addComponents([songloop, queueloop, forward, rewind]);
     return {
       embeds: [embed],
       components: [row, row2]
